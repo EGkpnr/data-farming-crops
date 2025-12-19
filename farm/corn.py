@@ -1,18 +1,13 @@
+"""Corn crop implementation."""
 
-class Corn:
-    # YOUR CODE HERE
-    pass
+from farm.crop import Crop
 
+class Corn(Crop):
+    """Represents a corn crop.
 
-    def __init__(self):
-        self.grains = 0
-        self.watered = False
-
+    Watering increases grains by 10.
+    """
 
     def water(self):
-        self.watered = True
+        """Water the corn crop and add 10 grains."""
         self.grains += 10
-        
-    def ripe(self):
-
-        return self.grains >= 15

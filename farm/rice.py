@@ -1,20 +1,18 @@
+"""Rice crop implementation."""
 
-class Rice():
-        # YOUR CODE HERE
-    pass
-    def __init__(self):
-        self.grains = 0
-        self.watered = False
-        self.transplanted = False
+from farm.crop import Crop
+
+
+class Rice(Crop):
+    """Represents a rice crop.
+
+    Watering increases grains by 5 and transplanting increases grains by 10.
+    """
 
     def water(self):
-        self.watered = True
+        """Water the rice crop and add 5 grains."""
         self.grains += 5
 
     def transplant(self):
-        if self.watered:
-            self.transplanted = True
-            self.grains += 10
-
-    def ripe(self):
-        return self.grains >= 15
+        """Transplant the rice crop and add 10 grains."""
+        self.grains += 10

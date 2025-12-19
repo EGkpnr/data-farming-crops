@@ -1,19 +1,15 @@
+"""Crop base class with common behavior for all crops."""
+
 # pylint: disable=too-few-public-methods
 
 
 class Crop:
-    pass  # YOUR CODE HERE
-
-    """A base class for crops."""
+    """Base class for crops that holds common state and behavior."""
 
     def __init__(self):
-        self.watered = False
+        """Initialize a crop with zero grains."""
         self.grains = 0
-        self.ripe = False
 
-    def water(self):
-        """Water the crop."""
-        self.watered = True
-        self.grains += 100  
-
-        self.ripe = True 
+    def ripe(self):
+        """Return True when the crop has enough grains to be considered ripe."""
+        return self.grains >= 15
